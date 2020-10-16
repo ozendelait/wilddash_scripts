@@ -23,5 +23,16 @@ Now you can execute the download script ``` download_wilddash2.sh ```
 
 ```
 # Download files
-bash download_wilddash2
+bash download_wilddash_file.sh name_of_wilddash_file.ext /path/to/target/dir/ 
 ```
+
+
+When you are finished downloading your files, please remember to undefine your credentials and remove the cookie file:
+
+```
+# Copy WildDash credentials here
+export WILDDASH_USERNAME=
+export WILDDASH_PASSWORD=
+rm /path/to/target/dir/wd_cookies_downl.txt
+```
+
