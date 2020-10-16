@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Based on https://github.com/ozendelait/rvc_devkit/blob/master/segmentation/download_wilddash2.sh
 # which is based on https://github.com/mseg-dataset/mseg-api/blob/master/download_scripts/mseg_download_wilddash.sh
@@ -9,12 +9,11 @@
 # https://wilddash.cc/license/wilddash
 # -------------------------------------------------------------------
 
-# wd benchmark images download URL
-WILDDASH_BENCH_ZIP_URL="https://wilddash.cc/download/wd_both_02.zip"
-# wd ground truth download URL
-WILDDASH_GT_ZIP_URL="https://wilddash.cc/download/wd_public_02.zip"
-WILDDASH_COOKIE_FILE=wd_cookies_downl.txt
-WILDDASH_DST_FOLDER=$1
+
+WILDDASH_FILE_NAME=$1
+WILDDASH_DOWNL_URL="https://wilddash.cc/download/${WILDDASH_FILE_NAME}"
+WILDDASH_DST_FOLDER=$2
+WILDDASH_COOKIE_FILE="${WILDDASH_DST_FOLDER}/wd_cookies_downl.txt"
 
 echo "Downloading WildDash2 to $WILDDASH_DST_FOLDER"
 mkdir -p $WILDDASH_DST_FOLDER
@@ -42,8 +41,7 @@ else
 	rm wd_cookies_auth.txt
 	rm wd_login_page.html
 fi
-# will download "wd_public_02.zip" (3.2GB) and "wd_both_02.zip" (0.4GB)
-wget --no-check-certificate --continue --load-cookies $WILDDASH_COOKIE_FILE --content-disposition $WILDDASH_GT_ZIP_URL
-wget --no-check-certificate --continue --load-cookies $WILDDASH_COOKIE_FILE --content-disposition $WILDDASH_BENCH_ZIP_URL
 
-echo "WildDash v2 alpha dataset downloaded."
+wget --no-check-certificate --retry-connrefused --waitretry=1 --read-timeout=20 --timeout=15 -t 0 --continue --load-cookies $WILDDASH_COOKIE_FILE --content-disposition $WILDDASH_DOWNL_URL
+
+echo "Downloaded "
