@@ -14,16 +14,26 @@ See https://wilddash.cc/download for more information.
 To use the automatic download script, define these environment variables using 
 
 ```
-# Copy WildDash credentials here
+# Copy WildDash credentials here (note: username is a mail adress, use quotes to prevent problems with special characters)
 export WILDDASH_USERNAME="your_wd_username"
 export WILDDASH_PASSWORD="your_wd_passwd"
 ```
 
-Now you can execute the download script ``` download_wilddash2.sh ``` 
+Now you can execute the download script ``` download_wilddash_file.sh ``` 
 
 ```
-# Download files
+# Download specific file:
 bash download_wilddash_file.sh name_of_wilddash_file.ext /path/to/target/dir/ 
+
+# Download WildDash2:
+cd /path/to/target/dir/
+bash /path/to/wilddash_scripts/download_helper/download_wilddash2.sh
+
+# Download RailSem19:
+cd /path/to/target/dir/
+bash /path/to/wilddash_scripts/download_helper/download_railsem19.sh
+
+
 ```
 
 
