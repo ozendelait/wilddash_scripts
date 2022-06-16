@@ -14,7 +14,7 @@ If you want to distribute this tool jointly together with relabling information 
 python remap_delta.py --change_path file_s_to_be_changed.json --delta_path delta_remap_info.json
 ```
 
-Note that warnings are generated for all delta annotation which could not be matched in the json(s) to be changed. Some delta relabel information files might contain more data that an individual dataset. For example: the WD2 relabel information for MVD is combined in a single mvdv1p2_remap.json file but can be applied to either the training panoptic json or the validation json. So in both cases some remappings will not be found in the respectiv target files and warnings are to be expected.
+Note that warnings are generated for all delta annotation which could not be matched in the json(s) to be changed. Some delta relabel information files might contain more data that an individual dataset. For example: the WD2 relabel information for MVD is combined in a single mvdv1p2_remap.json file but can be applied to either the training panoptic json or the validation json. So in both cases some remappings will not be found in the respective target files and warnings are to be expected.
 
 ### Delta dataset relabeling json format ###
 
@@ -23,13 +23,13 @@ https://cocodataset.org/#format-data (4. Panoptic Segmentation)
 
 Changes are:
 * new categories for a specific dataset get the regular entries in the "categories" group but have no "id" attribute; ids are appended/assigned when relabeling an actual dataset which might use different orders etc.
-* the image_id attribute per annotation is a string representing a unique identifier derived from the filename of the individual files to be remapped. The redundent Cityscapes postfixes _gtFine_polygon are removed.
-* segment_info contain no category_id. Instead the attributes "old" and "new" contain human readable category names for the old and new categories.
-* Cityscapes polygon files have no unique identifier per segment other than the order within the file. The "id" attribute of the segment_info entries are thus use this index position for Cityscapes polygon.json files (indices start with 0 for the entry).
-* Polygon files can define shapes which will later be partially covered by other segments (based on z-order). To keep track of both states, the "bbox" and "area" attributes reflect the single original segment while "bbox_vis" and "area_vis" can optionally be added to reflect the visible extent of this segment after the full mask has been created.
+* the image_id attribute per annotation is a string representing a unique identifier derived from the filename of the individual files to be remapped. The redundant Cityscapes postfixes _gtFine_polygon are removed.
+* segment_info contain no category_id. Instead, the attributes "old" and "new" contain human-readable category names for the old and new categories.
+* Cityscapes polygon files have no unique identifier per segment other than the order within the file. The "id" attribute of the segment_info entries are thus using this index position for Cityscapes polygon.json files (indices start with 0 for the entry).
+* Polygon files can define shapes that will later be partially covered by other segments (based on z-order). To keep track of both states, the "bbox" and "area" attributes reflect the single original segment while "bbox_vis" and "area_vis" can optionally be added to reflect the visible extent of this segment after the full mask has been created.
 
 ### Citation: ###
-If you use the WD2 relabling information, please cite our associated paper:
+If you use the WD2 relabeling information, please cite our associated paper:
 
     @InProceedings{Zendel_2022_CVPR,
     author = {Zendel, Oliver and Sch{\"o}rghuber, Matthias and Rainer, Bernhard and Murschitz, Markus and Beleznai, Csaba},
@@ -39,7 +39,7 @@ If you use the WD2 relabling information, please cite our associated paper:
     year = {2022}
     }
 
-If you like to use this tool/delta relabling format for your project, please cite this repo:
+If you like to use this tool/delta relabeling format for your project, please cite our repo:
 
     @misc{ZendelDeltaRelabel,
     author = {Zendel, Oliver and Sch{\"o}rghuber, Matthias},
