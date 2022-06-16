@@ -14,6 +14,8 @@ If you want to distribute this tool jointly together with relabling information 
 python remap_delta.py --change_path file_s_to_be_changed.json --delta_path delta_remap_info.json
 ```
 
+Note that warnings are generated for all delta annotation which could not be matched in the json(s) to be changed. Some delta relabel information files might contain more data that an individual dataset. For example: the WD2 relabel information for MVD is combined in a single mvdv1p2_remap.json file but can be applied to either the training panoptic json or the validation json. So in both cases some remappings will not be found in the respectiv target files and warnings are to be expected.
+
 ### Delta dataset relabeling json format ###
 
 The relabeling format is derived from the COCO panoptic json format:
