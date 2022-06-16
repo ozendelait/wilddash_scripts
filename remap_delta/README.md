@@ -1,6 +1,6 @@
 ## remap_delta dataset relabeling tool
 
-Tool to remap datasets inplace using a supplied delta remap information json (e.g. downloaded from wilddash.cc to remap MVD, Cityscapes, or IDD to include pickup-truck and van labels).
+Tool to remap datasets inplace using a supplied delta remap information json (e.g. [downloaded from wilddash.cc](https://wilddash.cc/download/wd2_add_pickupvan.zip) to remap MVD, Cityscapes, or IDD to include pickup-truck and van labels).
 Additional meta data in the remap files prevent mix-ups between datasets without requiring explicit file hashes (which could be a problem when starting with an already mixed/altered dataset).
 
 ### License ###
