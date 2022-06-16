@@ -41,12 +41,11 @@ If you use the WD2 relabling information, please cite our associated paper:
 
 If you like to use this tool/delta relabling format for your project, please cite this repo:
 
-@misc{ZendelDeltaRelabel,
-  author = {Zendel, Oliver and Sch{\"o}rghuber, Matthias},
-  title = {Delta dataset relabeling tool},
-  year = {2022},
-  publisher = {GitHub},
-  journal = {GitHub repository},
-  howpublished = {\url{https://github.com/ozendelait/wilddash_scripts}},
-  commit = {7521b70937355e826ea7e028a615108cdb18d0ee}
-}
+    @misc{ZendelDeltaRelabel,
+    author = {Zendel, Oliver and Sch{\"o}rghuber, Matthias},
+    title = {Delta dataset relabeling tool},
+    year = {2022},
+    publisher = {GitHub},
+    journal = {GitHub repository},
+    howpublished = {\url{https://github.com/ozendelait/wilddash_scripts/remap_delta}},
+    }
