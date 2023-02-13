@@ -20,5 +20,6 @@ Simple script to convert category meta data between Cityscapes labels.py format 
 ### remap_coco.py / wd2_unified_label_policy.json ###
 
 Tool and meta-data to convert Wilddash2 into MVD v1.2, Cityscapes, IDD, and WD2_eval categories.
-The json file contains the unified panoptic segmentation label policy as discribed by the Wilddash2 paper ([Table 1 in Supplemental](https://openaccess.thecvf.com/content/CVPR2022/supplemental/Zendel_Unifying_Panoptic_Segmentation_CVPR_2022_supplemental.pdf) )
-Combine this with pano2sem.py to create converted semantic segmentation data.
+The json file contains the unified panoptic segmentation label policy as discribed by the Wilddash2 paper ([Table 1 in Supplemental](https://openaccess.thecvf.com/content/CVPR2022/supplemental/Zendel_Unifying_Panoptic_Segmentation_CVPR_2022_supplemental.pdf) ).
+
+Combine remap_coco.py with pano2sem.py to create converted semantic segmentation (uint8) data.
