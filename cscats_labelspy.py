@@ -21,8 +21,6 @@ import json
 # as well as Mapillary Vistas/Wilddash2 meta json files
 def cocojson2cats(json_path):
     jcont = json.load(open(json_path))
-    if not 'categories' in jcont:
-        print("KEYS: "+str(jcont.keys()))
     cats = jcont.get('categories',jcont.get('labels'))
     # add supercategoryids ids
     sc_ids = {}
