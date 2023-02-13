@@ -17,7 +17,7 @@ import glob
 import json
 import argparse
 
-def tqdm_none(l, total=None):
+def tqdm_none(l, desc='', total=None):
     return l
 try:
     from tqdm import tqdm as tqdm_con
@@ -30,6 +30,14 @@ def bgrids_to_intids(orig_mask_bgr):
     return  orig_mask_bgr[:, :, 0].astype(np.uint32) * 65536 + \
             orig_mask_bgr[:, :, 1].astype(np.uint32) * 256 + \
             orig_mask_bgr[:, :, 2].astype(np.uint32)
+            
+def check_set_cont(n):
+    if not n is None and not n.flags['C_CONTIGUOUS']:
+        return np.asarray(n, order='C')
+    return n
+    
+def intids_to_bgrids(masksegm):
+    return check_set_cont(masksegm).view(np.uint8).reshape((masksegm.shape[0],masksegm.shape[1],4))[:,:,::-1][:,:,1:4]
 
 def panoptic2segm(json_path, outp_dir_sem=None, outp_dir_inst=None, label_png_dir=None, tqdm_vers=tqdm_nb):
     #default: masks are in a directory with the same name as the panoptic json filename
