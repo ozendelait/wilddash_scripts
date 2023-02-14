@@ -551,7 +551,7 @@
             "mvd1p2_name": "construction--barrier--curb",
             "idd_name": "curb",
             "cs_name": "terrain",
-            "wd2eval_name": "sidewalk"
+            "wd2eval_name": "terrain"
         },
         {
             "wd2_name": "servicelane",
@@ -1846,39 +1846,6 @@
                     85,
                     0,
                     85
-                ]
-            },
-            {
-                "id": 35,
-                "name": "tram track",
-                "isthing": false,
-                "supercategory": null,
-                "color": [
-                    192,
-                    0,
-                    128
-                ]
-            },
-            {
-                "id": 36,
-                "name": "billboard",
-                "isthing": false,
-                "supercategory": null,
-                "color": [
-                    174,
-                    64,
-                    67
-                ]
-            },
-            {
-                "id": 37,
-                "name": "street-light",
-                "isthing": false,
-                "supercategory": null,
-                "color": [
-                    210,
-                    170,
-                    100
                 ]
             }
         ],
@@ -3942,28 +3909,6 @@
                     0,
                     0,
                     142
-                ]
-            },
-            {
-                "id": 40,
-                "name": "pickup",
-                "isthing": true,
-                "supercategory": "vehicle",
-                "color": [
-                    40,
-                    0,
-                    100
-                ]
-            },
-            {
-                "id": 41,
-                "name": "van",
-                "isthing": true,
-                "supercategory": "vehicle",
-                "color": [
-                    0,
-                    40,
-                    120
                 ]
             }
         ]
