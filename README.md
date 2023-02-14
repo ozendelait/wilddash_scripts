@@ -15,7 +15,7 @@ Tool and json format for relabeling of other datasets (see subfolder)
 
 ### cscats_labelspy.py ###
 
-Simple script to convert category meta data between Cityscapes labels.py format and COCO panoptic category json format
+Simple script to convert category meta data between [Cityscapes labels.py format](https://github.com/mcordts/cityscapesScripts/blob/master/cityscapesscripts/helpers/labels.py) and [COCO panoptic category json format](https://cocodataset.org/#format-data)
 
 ### remap_coco.py / wd2_unified_label_policy.json ###
 
